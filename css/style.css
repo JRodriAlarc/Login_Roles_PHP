@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@400;500;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #fc540c, #ff9232);
+}
+
+.container{
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.form{
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  text-align: center;
+  padding: 20px 25px;
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.7);
+}
+
+form h1{
+  margin-bottom: 5px;
+  margin-top: 50px;
+}
+
+form h3{
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+form label{
+  margin-bottom: 35px;
+}
+
+form label .fa-solid{
+  color: #fc540c;
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+form label input{
+  outline: none;
+  border: none;
+  color:#1f1e1e;
+  border-bottom: solid 2px #fc540c;
+  padding: 0 5px;
+  font-size: 15px;
+  width: 70%;
+}
+
+form label input::placeholder{
+  color:#1f1e1e
+}
+
+form .link {
+  color: #252525;
+  margin-bottom: 15px;
+}
+
+form button{
+  margin-bottom: 9px;
+}
+
+select{
+  margin-top: 10px;
+  outline: none;
+  border: 2px solid #fc540c;
+  padding: 4px;
+  border-radius: 8px;
+  font-size: 15px;
+  width: 70%;
+}
+
+/*
+form .buttons{
+  background-color: orange;
+  display: flex;
+  margin-bottom: 9px;
+}
+*/
+
+img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: 75px;
+  left: calc(50% - 72px);
+}
+
+.buttons button{
+  justify-content: center;
+  width: 98%;
+}
+
+button, i{
+  font-size: 28px;
+  margin-left: 5px;
+}
+
+button {
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: Helvetica,"sans-serif";
+  transition: all .2s;
+  padding: 8px 12px;
+  border-radius: 100px;
+  background: linear-gradient(to left, #a0e360, #74d519 );
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  transform: 5s;
+  }
+
+  .btn-cancel{
+    background: linear-gradient(to left,#ff1515, #db0404);
+  }
+
+  .btn_save{
+    color: white;
+    background: linear-gradient(to left, #fc540c, #ff6422);
+  }
+  
+  button:hover {
+    background: linear-gradient(to left, #72df0c, #a0e360);
+  }
+
+  .btn-cancel:hover{
+    background: linear-gradient(to left, #e60101, #ff4848);
+  }
+  
+  .btn_save:hover{
+    background: linear-gradient(to left, #ff4d00, #ff753a);
+  }
+
+  button > svg {
+    width: 34px;
+    margin-left: 10px;
+    transition: transform .3s ease-in-out;
+  }
+  
+  button:hover svg {
+    transform: translateX(5px);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }

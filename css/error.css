@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@400;500;900&display=swap');
+
+body{
+    background-color: #004466;
+    color: white;
+    text-align: center;
+    padding: 10vh;
+    margin: 0;
+    font-family:'Poppins',sans-serif;
+}
+
+h1{
+    margin: 0px;
+    font-size: 72px;
+}
+
+h3{
+    margin: 40px 0;
+}
+
+img{
+    width: 300px;
+    height: 300px;
+    /*border-radius: 50%;
+    position: absolute;
+    top: 80px;*/
+    left: calc(50% - 72px);
+}
+
+a{
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+i{
+  font-size: 28px;
+  margin-left: 8px;
+}
+
+.btn{
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all .2s;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background: linear-gradient(to left, #fc540c, #ff6422);
+    border: 1px solid transparent;
+    color: white;
+    font-size: 17px;
+}
+
+button:hover {
+    background: linear-gradient(to left, #ff6422, #fc540c);
+}
+
+button > svg {
+    width: 34px;
+    margin-left: 10px;
+    transition: transform .3s ease-in-out;
+}
+
+button:hover svg {
+    transform: translateX(5px);
+}
+  
+button:active {
+    transform: scale(0.95);
+}
