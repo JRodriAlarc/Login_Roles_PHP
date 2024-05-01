@@ -173,10 +173,14 @@
                         <div class="check">
                             <div class="checkbox-wrapper">
                                 <?php
-                                    if($escritura == "Si"){
-                                        echo "<input type='checkbox' id='check2' hidden name='writeusr' checked><p class='permisos'>Escritura</p>";
+                                    if($permis != 'Cliente'){
+                                        if($escritura == "Si"){
+                                            echo "<input type='checkbox' id='check2' hidden name='writeusr' checked><p class='permisos'>Escritura</p>";
+                                        } else {
+                                            echo "<input type='checkbox' id='check2' hidden name='writeusr'><p class='permisos'>Escritura</p>";
+                                        }
                                     } else {
-                                        echo "<input type='checkbox' id='check2' hidden name='writeusr'><p class='permisos'>Escritura</p>";
+                                        echo "<input type='checkbox' id='check2' hidden name='writeusr' disabled><p class='permisos'>Escritura</p>";
                                     }
                                 ?>
                                 <label for="check2" class="checkmark"></label>
