@@ -10,7 +10,7 @@
     $consulta = mysqli_query($conexion, $query);
     $array = mysqli_fetch_array($consulta);
 
-
+    //Comprobar el estado de cuenta este activo
     $estadoCuenta = "SELECT status FROM registros WHERE email = '$usuario'";
     $statusCheck = mysqli_query($conexion, $estadoCuenta);
     $status = mysqli_fetch_assoc($statusCheck);

@@ -50,28 +50,40 @@
             <?php 
             
                 $resultado = mysqli_query($conexion, $datos); 
+
+                //Comprobar el permiso de Escritura
+                $escrituraCuenta = "SELECT escritura FROM registros WHERE email = '$usuario'";
+                $escrituraCheck = mysqli_query($conexion, $escrituraCuenta);
+                $escritura = mysqli_fetch_assoc($escrituraCheck);
+                #var_dump($escritura);
                 
                 while($row = mysqli_fetch_assoc($resultado)){
-            ?>
-
-            <tr>
-                <td><?php echo $row['id']; ?></td>
-                <td><?php echo $row['nombre']; ?></td>
-                <td><?php echo $row['email']; ?></td>
-                <td><?php echo $row['telefono']; ?></td>
-                <td><?php echo $row['contrasenia']; ?></td>
-                <td>
-                    <button class="actualizar">
-                        <?php echo "<a href='editarVendedor.php?id=".$row['id']."'>Editar</a>"; ?>
-                        <i class="fa-solid fa-pencil"></i>
-                    </button>
-                </td>
-            </tr>
-                
-            <?php 
+                ?>
+                    <tr>
+                        <td><?php echo $row['id']; ?></td>
+                        <td><?php echo $row['nombre']; ?></td>
+                        <td><?php echo $row['email']; ?></td>
+                        <td><?php echo $row['telefono']; ?></td>
+                        <td><?php echo $row['contrasenia']; ?></td>
+                <?php
+                    if($escritura['escritura'] == "Si"){
+                        ?>
+                            <td>
+                                <button class="actualizar">
+                                    <?php echo "<a href='editarVendedor.php?id=".$row['id']."'>Editar</a>"; ?>
+                                    <i class="fa-solid fa-pencil"></i>
+                                </button>
+                            </td>
+                        <?php
+                    }
+                ?>
+            
+                    </tr>
+                        
+                <?php 
                 }
-                mysqli_free_result($resultado);
-            ?>
+                    mysqli_free_result($resultado);
+                ?>
             
         </table>
 
