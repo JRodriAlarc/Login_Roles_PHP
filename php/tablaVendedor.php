@@ -39,7 +39,7 @@
         <table class="tabla">
             <caption>Usuarios Registrados en la Base de Datos:</caption>
             <tr>
-                <th>Id</th>
+                <!--<th>Id</th>-->
                 <th>Nombre:</th>
                 <th>Email:</th>
                 <th>Telefono:</th>
@@ -60,7 +60,7 @@
                 while($row = mysqli_fetch_assoc($resultado)){
                 ?>
                     <tr>
-                        <td><?php echo $row['id']; ?></td>
+                        <!--<td><?php echo $row['id']; ?></td>-->
                         <td><?php echo $row['nombre']; ?></td>
                         <td><?php echo $row['email']; ?></td>
                         <td><?php echo $row['telefono']; ?></td>
