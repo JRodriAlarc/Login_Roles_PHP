@@ -1,5 +1,7 @@
 <?php
 
+    include_once "php/conexion.php";
+
     session_start();
     $usuario = $_SESSION['username'];
 
@@ -38,12 +40,24 @@
                     <h2> <?php echo "$usuario"; ?> </h2>
                     <h3>Esta es tu Cuenta de Vendedor</h3>
 
-                    <a href="php/tablaVendedor.php">
-                        <button>
-                            <span>Editar Registros</span>
-                            <i class="fa-regular fa-pen-to-square"></i>
-                        </button>
-                    </a>
+                    <?php 
+                        //Comprobar el estado de cuenta este activo
+                        $verCuenta = "SELECT lectura FROM registros WHERE email = '$usuario'";
+                        $viewCheck = mysqli_query($conexion, $verCuenta);
+                        $view = mysqli_fetch_assoc($viewCheck);
+                        #var_dump($view);
+
+                        if($view['lectura'] == "Si"){
+                            ?>
+                                <a href="php/tablaVendedor.php">
+                                    <button>
+                                        <span>Editar Registros</span>
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </button>
+                                </a>
+                            <?php
+                        }
+                    ?>
 
                     <a href="php/salir.php">
                         <button>
