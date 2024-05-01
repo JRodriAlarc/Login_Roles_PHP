@@ -1,7 +1,7 @@
 <?php
 
     include_once "conexion.php";
-    $datos = "SELECT * FROM registros";
+    $datos = "SELECT * FROM registros WHERE rol != 'Administrador'";
 
     session_start();
     $usuario = $_SESSION['username'];
@@ -39,7 +39,7 @@
         <table class="tabla">
             <caption>Usuarios Registrados en la Base de Datos:</caption>
             <tr>
-                <!--<th>Id</th>-->
+                <th>Id</th>
                 <th>Nombre:</th>
                 <th>Email:</th>
                 <th>Telefono:</th>
@@ -55,7 +55,7 @@
             ?>
 
             <tr>
-                <!--<td><?php echo $row['id']; ?></td>-->
+                <td><?php echo $row['id']; ?></td>
                 <td><?php echo $row['nombre']; ?></td>
                 <td><?php echo $row['email']; ?></td>
                 <td><?php echo $row['telefono']; ?></td>
