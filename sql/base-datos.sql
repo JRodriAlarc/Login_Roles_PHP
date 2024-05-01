@@ -20,9 +20,9 @@ ALTER TABLE registros
 
 SELECT * FROM registros;
 
-INSERT INTO registros (nombre, email, telefono, contrasenia, rol) VALUES('John Smith', 'moydutogno@gufum.com', '7714984515', 'qwerty000', 'Cliente');
-INSERT INTO registros (nombre, email, telefono, contrasenia, rol) VALUES('Jona Rodri', 'JonaRod@gmail.com', '7711460284', 'qwerty000', 'Administrador');
-INSERT INTO registros (nombre, email, telefono, contrasenia, rol) VALUES('Juan Perez', 'JuanPer3z@gmail.com', '7713751632', 'qwerty000', 'Vendedor');
+INSERT INTO registros (nombre, email, telefono, contrasenia, rol, lectura, escritura, status) VALUES('John Smith', 'moydutogno@gufum.com', '7714984515', 'qwerty000', 'Cliente', 'Si', 'No', 'Si');
+INSERT INTO registros (nombre, email, telefono, contrasenia, rol, lectura, escritura, status) VALUES('Jona Rodri', 'JonaRod@gmail.com', '7711460284', 'qwerty000', 'Administrador', 'Si', 'Si', 'Si');
+INSERT INTO registros (nombre, email, telefono, contrasenia, rol, lectura, escritura, status) VALUES('Juan Perez', 'JuanPer3z@gmail.com', '7713751632', 'qwerty000', 'Vendedor', 'Si', 'Si', 'No');
 
 SELECT id,email,contrasenia,rol FROM registros WHERE email = 'moydutogno@gufum.com';
 
